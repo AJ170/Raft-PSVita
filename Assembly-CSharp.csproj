@@ -1,0 +1,705 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{4E02ECA1-1036-1A58-8066-38F38803CFAA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>.</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_2_19;UNITY_2018_2;UNITY_2018;ENABLE_AUDIO;ENABLE_CLOTH;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_PSVITA;UNITY_PSP2;UNITY_PSP2_API;UNITY_GFX_USE_PLATFORM_VSYNC;ENABLE_AUDIO_MANAGER_BASED_SCHEDULING;ENABLE_MICROPHONE;ENABLE_EVENT_QUEUE;ENABLE_NETWORK;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;ENABLE_IL2CPP;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE;ENABLE_MONO</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoConfig>true</NoConfig>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
+    <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>C:\Program Files\Unity\Editor\Data\Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\InputModules\VitaInputModule.cs" />
+     <Compile Include="Assets\InputModules\VitaInputModuleExample\SetInitialFocus.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\AddResult.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\AdvancedCollision.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\AnimationConnection.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Axe.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\AxeMode.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\AzureFog.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\AzureSky_Controller.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\AzureSkyCloudAnimation.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\AzureTargetRender.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Block.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\BlockMenu.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\BlockPlacer.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\BlockQuad.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\BlockRemover.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\BlockType.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Bobber.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\BobTransform.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\BuildComponent.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\ButterflyFFTUtility.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\CameraBob.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\CameraRotation.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\CanvasHelper.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\CenterOfMass.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\ChargeMeter.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Chest.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Coconut.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\ColliderExtensions.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\CollisionTest.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\CookComponent.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\CookingStand.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\CookItemConnection.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Cost.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\CraftingCategory.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\CraftingMenu.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Cropplot.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\DeathMenu.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\DropItem.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\EatComponent.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\EnableCameraDepthInForward.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Entity.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\FadePanel.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\FishingItem.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\FishingRod.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\FPSCounter.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Hammer.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Helper.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Hook.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Hotbar.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\ICookable.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\IEdible.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\IItem.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Inventory.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\InventoryPickup.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\InventoryPickupMenuItem.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\ItemCollector.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\ItemConnection.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\ItemCostBox.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\ItemIndex.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\ItemType.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\IUsableItem.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\IWaterDisplacements.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\IWaterInteraction.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\IWaterShore.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\IWavesParticleSystemPlugin.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\LayerMasks.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\LockRotation.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\MoonShaderExempleScene.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\MouseLook.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Net.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\NightLightController.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\OccupyingComponent.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\OptionsMenu.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\OutputDemo.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\OverlayRendererOrderAttribute.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\ParticleController.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\ParticleSystemTimeOffset.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PersonController.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Pickup.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PickupItem.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PieMenu.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PieSlice.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlaceComponent.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlankSpawner.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Plant.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlantationSlot.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlantComponent.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Player.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayerAnimation.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayerAnimator.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayerInventory.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayerItemManager.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayerStats.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\Blur.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\CpuFFT.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\Dx11FFT.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\DynamicSmoothness.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\FastMath.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\FloatEqualityComparer.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\Gerstner4.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\GerstnerWave.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\GpuFFT.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\Heap.1.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\Int32EqualityComparer.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\IOverlaysRenderer.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\IPoint2D.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\IShaderCollectionBuilder.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\IShaderCollectionClient.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\IWaterImageEffect.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\IWaterRenderAware.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\NetworkWater.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\NormalMapAnimation.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\PhillipsSpectrum.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\PixelShaderFFT.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\Quadtree.1.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\RenderTexturesCache.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\Samples\PresetDropdown.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\ScriptableObjectSingleton.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\ShaderCollection.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\SpectrumResolver.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\SpectrumResolverCPU.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\SpritesheetAnimation.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\StaticWaterInteraction.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\SubmersionState.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\TemporaryRenderTexture.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\UInt64EqualityComparer.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\UnderwaterIME.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\UnifiedSpectrum.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\Water.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterAsynchronousTasks.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterCamera.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterCustomSurfaceMeshes.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterDebug.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterDropsIME.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterFloat.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterFoam.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterGeometry.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterGeometryType.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterGlobals.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterNormalMapAnimation.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterOverlays.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterOverlaysData.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterPackageUtilities.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterPhysics.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterPlanarReflection.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterPrimitiveBase.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterProfile.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterProjectionGrid.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterProjectSettings.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterQualityLevel.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterQualitySettings.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterRadialGrid.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterRenderer.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterSample.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterSimpleMask.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterSpray.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterSprayEmitter.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterTileSpectrum.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterUniformGrid.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterUtilities.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterUvAnimator.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterVolume.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterVolumeAdd.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterVolumeBase.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterVolumeProbe.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterVolumeSubtract.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterWave.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterWavesMode.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterWavesSpectrum.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterWavesSpectrumData.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaveParticle.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaveParticlesGroup.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaveParticlesQuadtree.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WavesEmitter.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WavesParticleSystem.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaveSpectrumRenderMode.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WavesRendererFFT.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WavesRendererGerstner.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WindWaves.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\WaterSamples\AdditiveVolumesSample.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\WaterSamples\CubesSample.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\WaterSamples\FogCheckbox.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\WaterSamples\FpsCounter.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\WaterSamples\FreeCamera.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\WaterSamples\GameObjectVisibilityCheckbox.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\WaterSamples\QualityLevelDropdown.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\WaterSamples\Sail.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\WaterSamples\SampleScene.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PoolItem.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\PoolManager.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\RandomDropItem.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\RandomDropper.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Recipe.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\RecipeMenuItem.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\RemoveResult.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\RGD_Block.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\RGD_CookingStand.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\RGD_Cropplot.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\RGD_Game.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\RGD_Inventory.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\RGD_ItemNet.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\RGD_PickupItem.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\RGD_PlantationSlot.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\RGD_Player.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\RGD_Sky.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\RGD_Slot.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\RGD_Yield.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\SaveAndLoad.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\SavedGameButton.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\SelectedRecipeBox.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\SerializableTransform.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Settings.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\ShaderVariant.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Shark.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\SHARKROTATE.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\SingletonGeneric.1.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\SkyboxFog.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Slot.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\SoftNormalsToVertexColor.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\SoundManager.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Spear.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\StableComponent.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\StartMenuScreen.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Throwable.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Tincan_empty.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\TreeChopper.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\UI_Controller.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\URLOpener.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\UseItemController.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\VersionNumber.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\WaterItemRemover.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\WaterShadowCastingLight.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\WaterVolumetricLightingQuality.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\WaterWavesFFT.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\WaterWavesGerstner.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp\Weapon.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\AlphaButtonClickMask.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\EventSystemChecker.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\ForcedReset.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CinematicEffects\AmbientOcclusion.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CinematicEffects\AntiAliasing.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CinematicEffects\Bloom.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CinematicEffects\DepthOfField.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CinematicEffects\FXAA.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CinematicEffects\IAntiAliasing.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CinematicEffects\ImageEffectHelper.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CinematicEffects\LensAberrations.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CinematicEffects\MinAttribute.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CinematicEffects\RenderTextureUtility.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CinematicEffects\ScreenSpaceReflection.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CinematicEffects\SMAA.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CinematicEffects\TonemappingColorGrading.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CrossPlatformInput\AxisTouchButton.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CrossPlatformInput\ButtonHandler.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CrossPlatformInput\CrossPlatformInputManager.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CrossPlatformInput\InputAxisScrollbar.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CrossPlatformInput\Joystick.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CrossPlatformInput\MobileControlRig.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CrossPlatformInput\PlatformSpecific\MobileInput.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CrossPlatformInput\PlatformSpecific\StandaloneInput.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CrossPlatformInput\TiltInput.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CrossPlatformInput\TouchPad.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\CrossPlatformInput\VirtualInput.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Effects\AfterburnerPhysicsForce.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Effects\ExplosionFireAndDebris.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Effects\ExplosionPhysicsForce.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Effects\Explosive.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Effects\ExtinguishableParticleSystem.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Effects\FireLight.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Effects\Hose.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Effects\ParticleSystemMultiplier.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Effects\SmokeParticles.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\AAMode.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\Antialiasing.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\Bloom.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\BloomAndFlares.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\BloomOptimized.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\BloomScreenBlendMode.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\Blur.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\BlurOptimized.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\CameraMotionBlur.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\ColorCorrectionCurves.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\ColorCorrectionLookup.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\ColorCorrectionRamp.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\ContrastEnhance.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\ContrastStretch.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\CreaseShading.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\DepthOfField.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\DepthOfFieldDeprecated.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\EdgeDetection.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\Fisheye.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\GlobalFog.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\Grayscale.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\HDRBloomMode.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\ImageEffectBase.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\ImageEffects.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\LensflareStyle34.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\MotionBlur.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\NoiseAndGrain.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\NoiseAndScratches.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\PostEffectsBase.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\PostEffectsHelper.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\Quads.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\ScreenOverlay.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\ScreenSpaceAmbientObscurance.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\ScreenSpaceAmbientOcclusion.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\SepiaTone.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\SunShafts.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\TiltShift.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\Tonemapping.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\Triangles.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\TweakMode34.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\Twirl.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\VignetteAndChromaticAberration.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\ImageEffects\Vortex.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Utility\ActivateTrigger.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Utility\AutoMobileShaderSwitch.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Utility\AutoMoveAndRotate.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Utility\CameraRefocus.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Utility\CurveControlledBob.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Utility\DragRigidbody.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Utility\DynamicShadowSettings.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Utility\FollowTarget.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Utility\FOVKick.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Utility\FPSCounter.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Utility\LerpControlledBob.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Utility\ObjectResetter.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Utility\ParticleSystemDestroyer.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Utility\PlatformSpecificContent.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Utility\SimpleActivatorMenu.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Utility\SimpleMouseRotator.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Utility\SmoothFollow.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Utility\TimedObjectActivator.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Utility\TimedObjectDestructor.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Utility\WaypointCircuit.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Utility\WaypointProgressTracker.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Water\Displace.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Water\GerstnerDisplace.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Water\MeshContainer.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Water\PlanarReflection.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Water\SpecularLighting.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Water\Water.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Water\WaterBase.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Water\WaterQuality.cs" />
+     <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Water\WaterTile.cs" />
+     <None Include="Assets\Resources\ambientocclusion.shader" />
+     <None Include="Assets\Shader\HiddenDLAA.shader" />
+     <None Include="Assets\Resources\bokehsplatting.shader" />
+     <None Include="Assets\Shader\HiddenBrightPassFilter2.shader" />
+     <None Include="Assets\Shader\HiddenFXAA III (Console).shader" />
+     <None Include="Assets\Shader\PlayWay WaterUtilitiesPlanarReflection - Utilities.shader" />
+     <None Include="Assets\Resources\depthoffield.shader" />
+     <None Include="Assets\Shader\Shader ForgeFatique2.shader" />
+     <None Include="Assets\Shader\PlayWay WaterBaseFFT.shader" />
+     <None Include="Assets\Resources\tonemappingcolorgrading.shader" />
+     <None Include="Assets\Shader\HiddenSimpleClear.shader" />
+     <None Include="Assets\Shader\PlayWay WaterVariationsWater Volume _ALPHABLEND_ON _CUBEMAP_REFLECTIONS _VOLUMETRIC_LIGHTING _WATER_RECEIVE_SHADOWS _WATER_REFRACTION _WAVES_FFT.shader" />
+     <None Include="Assets\Resources\bloom.shader" />
+     <None Include="Assets\Shader\PlayWay WaterVariationsWater _ALPHABLEND_ON _CUBEMAP_REFLECTIONS _INCLUDE_SLOPE_VARIANCE _NORMALMAP _PLANAR_REFLECTIONS_HQ _VOLUMETRIC_LIGHTING _WATER_FOAM_WS _WATER_REFRACTION _WAVES_FFT.shader" />
+     <None Include="Assets\Shader\PlayWay WaterUtilityShadowEnforcer.shader" />
+     <None Include="Assets\Resources\screenspacereflection.shader" />
+     <None Include="Assets\Shader\azure[Sky]azure[Sky]_ProceduralClouds.shader" />
+     <None Include="Assets\Shader\PlayWay WaterVolumesFront Simple.shader" />
+     <None Include="Assets\DRMContent\Rock2_desc.txt" />
+     <None Include="Assets\Shader\PlayWay WaterVolumesBack.shader" />
+     <None Include="Assets\Shader\HiddenFXAA II.shader" />
+     <None Include="Assets\Shader\PlayWay WaterVariationsWater _ALPHABLEND_ON _CUBEMAP_REFLECTIONS _INCLUDE_SLOPE_VARIANCE _NORMALMAP _PLANAR_REFLECTIONS _VOLUMETRIC_LIGHTING _WATER_FOAM_WS _WATER_REFRACTION _WAVES_FFT.shader" />
+     <None Include="Assets\Shader\HiddenSSAO.shader" />
+     <None Include="Assets\Shader\PlayWay WaterDepthWater Depth.shader" />
+     <None Include="Assets\Resources\lensaberrations.shader" />
+     <None Include="Assets\Shader\HiddenLensFlareCreate.shader" />
+     <None Include="Assets\Shader\PlayWay WaterVariationsWater _ALPHABLEND_ON _CUBEMAP_REFLECTIONS _INCLUDE_SLOPE_VARIANCE _NORMALMAP _PLANAR_REFLECTIONS_HQ _VOLUMETRIC_LIGHTING _WATER_REFRACTION _WAVES_FFT.shader" />
+     <None Include="Assets\Shader\Shader ForgeWalls.shader" />
+     <None Include="Assets\DRMContent\Rock1_desc.txt" />
+     <None Include="Assets\Shader\HiddenFXAA Preset 3.shader" />
+     <None Include="Assets\Shader\PlayWay WaterDepthCopyMix.shader" />
+     <None Include="Assets\Shader\HiddenSunShaftsComposite.shader" />
+     <None Include="Assets\Shader\PlayWay WaterStandard Volume.shader" />
+     <None Include="Assets\Resources\fxaa.shader" />
+     <None Include="Assets\Shader\PlayWay WaterVolumesFront.shader" />
+     <None Include="Assets\Shader\Shader ForgeDepthTest.shader" />
+     <None Include="Assets\Shader\PlayWay WaterVariationsWater _ALPHABLEND_ON _CUBEMAP_REFLECTIONS _INCLUDE_SLOPE_VARIANCE _NORMALMAP _PLANAR_REFLECTIONS _VOLUMETRIC_LIGHTING _WATER_REFRACTION _WAVES_FFT.shader" />
+     <None Include="Assets\Shader\PlayWay WaterVariationsWater Volume _ALPHABLEND_ON _CUBEMAP_REFLECTIONS _VOLUMETRIC_LIGHTING _WATER_REFRACTION _WAVES_FFT.shader" />
+     <None Include="Assets\Shader\HiddenSSAA.shader" />
+     <None Include="Assets\Resources\histogramrender.shader" />
+     <None Include="Assets\Shader\HiddenBlurAndFlares.shader" />
+     <None Include="Assets\Shader\WaterTessellation.cginc" />
+     <None Include="Assets\Water5.shader" />
+     <None Include="Assets\Shader\azure[Sky]azure[Moon].shader" />
+     <None Include="Assets\Shader\azure[Sky]azure[Fog].shader" />
+     <None Include="Assets\Resources\medianfilter.shader" />
+     <None Include="Assets\Shader\Shader ForgePalmtree.shader" />
+     <None Include="Assets\Shader\PlayWay WaterSpectrumWater Spectrum.shader" />
+     <None Include="Assets\Shader\HiddenFXAA Preset 2.shader" />
+     <None Include="Assets\Shader\HiddenBlendForBloom.shader" />
+     <None Include="Assets\Shader\HiddenNFAA.shader" />
+     <None Include="Assets\Resources\smaa.shader" />
+     <None Include="Assets\Shader\PlayWay WaterStandard.shader" />
+     <None Include="Assets\Shader\PlayWay WaterUtilitiesFFT Utilities.shader" />
+ <Reference Include="UnityEditor.StandardEvents">
+ <HintPath>D:/PSVITA/Unity Projects/git/New folder/raft_vita/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro.Editor">
+ <HintPath>D:/PSVITA/Unity Projects/git/New folder/raft_vita/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.PackageManagerUI.Editor">
+ <HintPath>D:/PSVITA/Unity Projects/git/New folder/raft_vita/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>D:/PSVITA/Unity Projects/git/New folder/raft_vita/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AIModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.AIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ARModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.ARModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AccessibilityModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.AccessibilityModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AnimationModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.AnimationModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AssetBundleModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.AssetBundleModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AudioModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.AudioModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.BaselibModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.BaselibModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClothModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.ClothModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.CloudWebServicesModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.CloudWebServicesModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.CoreModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.CoreModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.DirectorModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.DirectorModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.FacebookModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.FacebookModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.FileSystemHttpModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.FileSystemHttpModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GameCenterModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.GameCenterModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GridModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.GridModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HotReloadModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.HotReloadModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.IMGUIModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.IMGUIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ImageConversionModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.ImageConversionModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.InputModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.InputModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.JSONSerializeModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.JSONSerializeModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.LocalizationModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.LocalizationModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PSVitaModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.PSVitaModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ParticleSystemModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.ParticleSystemModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ParticlesLegacyModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.ParticlesLegacyModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PerformanceReportingModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.PerformanceReportingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PhysicsModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.PhysicsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Physics2DModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.Physics2DModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ProfilerModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.ProfilerModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ScreenCaptureModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.ScreenCaptureModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SharedInternalsModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.SharedInternalsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpriteMaskModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.SpriteMaskModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpriteShapeModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.SpriteShapeModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.StreamingModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.StreamingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.StyleSheetsModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.StyleSheetsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SubstanceModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.SubstanceModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TLSModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.TLSModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TerrainModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.TerrainModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TerrainPhysicsModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TextRenderingModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.TextRenderingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TilemapModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.TilemapModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TimelineModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.TimelineModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIElementsModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UIElementsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UNETModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UNETModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UmbraModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UmbraModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityAnalyticsModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityConnectModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UnityConnectModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UnityWebRequestModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VRModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.VRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VehiclesModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.VehiclesModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VideoModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.VideoModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.WindModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.WindModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.XRModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Locator">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Timeline">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GoogleAudioSpatializer">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpatialTracking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Users/ajxcf/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.StandardEvents">
+ <HintPath>C:/Users/ajxcf/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="mscorlib">
+ <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
+ </Reference>
+ <Reference Include="System">
+ <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Core">
+ <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Core.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization">
+ <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Runtime.Serialization.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml">
+ <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.Linq">
+ <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.Linq.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityScript">
+ <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityScript.Lang">
+ <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.Lang.dll</HintPath>
+ </Reference>
+ <Reference Include="Boo.Lang">
+ <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

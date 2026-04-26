@@ -33,7 +33,8 @@ public class NightLightController : MonoBehaviour
 		Light[] array = lights;
 		foreach (Light light in array)
 		{
-			light.intensity = Mathf.MoveTowards(light.intensity, targetValue, Time.deltaTime * 0.1f);
+            light.intensity = Mathf.MoveTowards(light.intensity, targetValue, Time.deltaTime * 0.1f);
+       
 		}
 	}
 }

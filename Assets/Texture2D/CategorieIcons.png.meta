@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 7498e7d68ace88941a857d9925d6d6aa
-timeCreated: 1649264576
-licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: CategorieIcons_Placeables
@@ -9,7 +7,7 @@ TextureImporter:
     21300004: CategorieIcons_Tools
     21300006: CategoryIcons_Decorations
   externalObjects: {}
-  serializedVersion: 4
+  serializedVersion: 7
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -27,6 +25,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -57,12 +57,14 @@ TextureImporter:
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -71,8 +73,9 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Standalone
-    maxTextureSize: 256
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -81,8 +84,9 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: PSP2
-    maxTextureSize: 256
+  - serializedVersion: 2
+    buildTarget: PSP2
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -116,6 +120,12 @@ TextureImporter:
         - {x: 32, y: 2.9896107}
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4dae1450463759c4497582773171d785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: CategorieIcons_Basics
       rect:
@@ -139,6 +149,12 @@ TextureImporter:
         - {x: 21.000006, y: -28.975313}
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: b6bfff3678359204a99a05964502650a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: CategorieIcons_Tools
       rect:
@@ -159,6 +175,12 @@ TextureImporter:
         - {x: 31.00477, y: 29.000006}
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 241827bc6d369c34ca7561ba765b8cbf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: CategoryIcons_Decorations
       rect:
@@ -179,9 +201,23 @@ TextureImporter:
         - {x: 25.499996, y: -29.000002}
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 3b3a9a711e15d6e48bb75b5e63ce146e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
+    bones: []
+    spriteID: 
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

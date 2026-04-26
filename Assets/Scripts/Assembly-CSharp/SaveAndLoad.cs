@@ -77,31 +77,31 @@ public class SaveAndLoad : SingletonGeneric<SaveAndLoad>
 			}
 		}
 
-		//if (File.Exists(Path + GameManager.CurrentGameFileName))
-		//{
-		//	BinaryFormatter binaryFormatter = new BinaryFormatter();
-		//	FileStream fileStream = File.Open(Path + GameManager.CurrentGameFileName, FileMode.Open);
-		//	RGD_Game rGD_Game = null;
-		//	try
-		//	{
-		//		rGD_Game = binaryFormatter.Deserialize(fileStream) as RGD_Game;
-		//	}
-		//	catch (Exception message)
-		//	{
-		//		Debug.Log(message);
-		//		fileStream.Close();
-		//		CorruptFile(Path + GameManager.CurrentGameFileName, "OldVersion-");
-		//		Helper.SetCursorVisibleAndLockState(true, CursorLockMode.None);
-		//		SceneManager.LoadScene("MainMenuScene");
-		//		return;
-		//	}
-		//	if (rGD_Game != null)
-		//	{
-		//		RestoreRGDGame(rGD_Game);
-		//		Debug.Log("Load Map: Success");
-		//	}
-		//	fileStream.Close();
-		//}
+		if (File.Exists(Path + GameManager.CurrentGameFileName))
+		{
+			BinaryFormatter binaryFormatter = new BinaryFormatter();
+			FileStream fileStream = File.Open(Path + GameManager.CurrentGameFileName, FileMode.Open);
+			RGD_Game rGD_Game = null;
+			try
+			{
+				rGD_Game = binaryFormatter.Deserialize(fileStream) as RGD_Game;
+			}
+			catch (Exception message)
+			{
+				Debug.Log(message);
+				fileStream.Close();
+				CorruptFile(Path + GameManager.CurrentGameFileName, "OldVersion-");
+				Helper.SetCursorVisibleAndLockState(true, CursorLockMode.None);
+				SceneManager.LoadScene("MainMenuScene");
+				return;
+			}
+			if (rGD_Game != null)
+			{
+				RestoreRGDGame(rGD_Game);
+				Debug.Log("Load Map: Success");
+			}
+			fileStream.Close();
+		}
 	}
 
 	public void CorruptFile(string path, string textOnFile)

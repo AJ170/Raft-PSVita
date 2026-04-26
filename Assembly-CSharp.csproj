@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4E02ECA1-1036-1A58-8066-38F38803CFAA}</ProjectGuid>
+    <ProjectGuid>{A00A03ED-0B00-9855-6F38-21663B9FB6A2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,8 +53,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scenes\Scene Scripts\CameraRotation.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scenes\Scene Scripts\FPSCounter.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scenes\Scene Scripts\GISlider.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scenes\Scene Scripts\OutputExemple.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scenes\Scene Scripts\UIController.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scripts\AzureSkyController.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scripts\AzureSkyFogScattering.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scripts\AzureTargetMoonRenderTexture.cs" />
      <Compile Include="Assets\InputModules\VitaInputModule.cs" />
      <Compile Include="Assets\InputModules\VitaInputModuleExample\SetInitialFocus.cs" />
+     <Compile Include="Assets\PSVita_IME.cs" />
+     <Compile Include="Assets\PSVita_Trophies.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\AddResult.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\AdvancedCollision.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\AnimationConnection.cs" />
@@ -75,7 +85,6 @@
      <Compile Include="Assets\Scripts\Assembly-CSharp\BuildComponent.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\ButterflyFFTUtility.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\CameraBob.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\CameraRotation.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\CanvasHelper.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\CenterOfMass.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\ChargeMeter.cs" />
@@ -98,7 +107,6 @@
      <Compile Include="Assets\Scripts\Assembly-CSharp\FadePanel.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\FishingItem.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\FishingRod.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\FPSCounter.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\GameManager.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\Hammer.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\Helper.cs" />
@@ -149,101 +157,6 @@
      <Compile Include="Assets\Scripts\Assembly-CSharp\PlayerInventory.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\PlayerItemManager.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\PlayerStats.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\Blur.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\CpuFFT.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\Dx11FFT.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\DynamicSmoothness.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\FastMath.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\FloatEqualityComparer.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\Gerstner4.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\GerstnerWave.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\GpuFFT.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\Heap.1.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\Int32EqualityComparer.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\IOverlaysRenderer.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\IPoint2D.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\IShaderCollectionBuilder.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\IShaderCollectionClient.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\IWaterImageEffect.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\IWaterRenderAware.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\NetworkWater.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\NormalMapAnimation.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\PhillipsSpectrum.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\PixelShaderFFT.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\Quadtree.1.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\RenderTexturesCache.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\Samples\PresetDropdown.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\ScriptableObjectSingleton.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\ShaderCollection.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\SpectrumResolver.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\SpectrumResolverCPU.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\SpritesheetAnimation.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\StaticWaterInteraction.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\SubmersionState.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\TemporaryRenderTexture.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\UInt64EqualityComparer.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\UnderwaterIME.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\UnifiedSpectrum.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\Water.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterAsynchronousTasks.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterCamera.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterCustomSurfaceMeshes.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterDebug.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterDropsIME.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterFloat.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterFoam.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterGeometry.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterGeometryType.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterGlobals.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterNormalMapAnimation.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterOverlays.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterOverlaysData.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterPackageUtilities.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterPhysics.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterPlanarReflection.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterPrimitiveBase.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterProfile.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterProjectionGrid.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterProjectSettings.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterQualityLevel.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterQualitySettings.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterRadialGrid.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterRenderer.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterSample.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterSimpleMask.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterSpray.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterSprayEmitter.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterTileSpectrum.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterUniformGrid.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterUtilities.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterUvAnimator.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterVolume.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterVolumeAdd.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterVolumeBase.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterVolumeProbe.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterVolumeSubtract.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterWave.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterWavesMode.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterWavesSpectrum.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaterWavesSpectrumData.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaveParticle.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaveParticlesGroup.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaveParticlesQuadtree.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WavesEmitter.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WavesParticleSystem.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WaveSpectrumRenderMode.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WavesRendererFFT.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WavesRendererGerstner.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\Water\WindWaves.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\WaterSamples\AdditiveVolumesSample.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\WaterSamples\CubesSample.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\WaterSamples\FogCheckbox.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\WaterSamples\FpsCounter.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\WaterSamples\FreeCamera.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\WaterSamples\GameObjectVisibilityCheckbox.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\WaterSamples\QualityLevelDropdown.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\WaterSamples\Sail.cs" />
-     <Compile Include="Assets\Scripts\Assembly-CSharp\PlayWay\WaterSamples\SampleScene.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\PoolItem.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\PoolManager.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\RandomDropItem.cs" />
@@ -401,6 +314,44 @@
      <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Water\WaterBase.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Water\WaterQuality.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Water\WaterTile.cs" />
+     <Compile Include="Assets\SonyExamples\Utils\IScreen.cs" />
+     <Compile Include="Assets\SonyExamples\Utils\MenuLayout.cs" />
+     <Compile Include="Assets\SonyExamples\Utils\MenuStack.cs" />
+     <Compile Include="Assets\SonyExamples\Utils\OnScreenLog.cs" />
+     <Compile Include="Assets\SonyExamples\Vita\CommonDialog\Scripts\SonyVitaCommonDialog.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <None Include="Assets\Resources\ambientocclusion.shader" />
      <None Include="Assets\Shader\HiddenDLAA.shader" />
      <None Include="Assets\Resources\bokehsplatting.shader" />
@@ -409,10 +360,14 @@
      <None Include="Assets\Shader\PlayWay WaterUtilitiesPlanarReflection - Utilities.shader" />
      <None Include="Assets\Resources\depthoffield.shader" />
      <None Include="Assets\Shader\Shader ForgeFatique2.shader" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\AzureVertexSky.shader" />
      <None Include="Assets\Shader\PlayWay WaterBaseFFT.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\Resources\tonemappingcolorgrading.shader" />
      <None Include="Assets\Shader\HiddenSimpleClear.shader" />
      <None Include="Assets\Shader\PlayWay WaterVariationsWater Volume _ALPHABLEND_ON _CUBEMAP_REFLECTIONS _VOLUMETRIC_LIGHTING _WATER_RECEIVE_SHADOWS _WATER_REFRACTION _WAVES_FFT.shader" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\AzureVertexSkyStaticCloud.shader" />
      <None Include="Assets\Resources\bloom.shader" />
      <None Include="Assets\Shader\PlayWay WaterVariationsWater _ALPHABLEND_ON _CUBEMAP_REFLECTIONS _INCLUDE_SLOPE_VARIANCE _NORMALMAP _PLANAR_REFLECTIONS_HQ _VOLUMETRIC_LIGHTING _WATER_FOAM_WS _WATER_REFRACTION _WAVES_FFT.shader" />
      <None Include="Assets\Shader\PlayWay WaterUtilityShadowEnforcer.shader" />
@@ -421,51 +376,84 @@
      <None Include="Assets\Shader\PlayWay WaterVolumesFront Simple.shader" />
      <None Include="Assets\DRMContent\Rock2_desc.txt" />
      <None Include="Assets\Shader\PlayWay WaterVolumesBack.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Shader\HiddenFXAA II.shader" />
      <None Include="Assets\Shader\PlayWay WaterVariationsWater _ALPHABLEND_ON _CUBEMAP_REFLECTIONS _INCLUDE_SLOPE_VARIANCE _NORMALMAP _PLANAR_REFLECTIONS _VOLUMETRIC_LIGHTING _WATER_FOAM_WS _WATER_REFRACTION _WAVES_FFT.shader" />
      <None Include="Assets\Shader\HiddenSSAO.shader" />
      <None Include="Assets\Shader\PlayWay WaterDepthWater Depth.shader" />
      <None Include="Assets\Resources\lensaberrations.shader" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\AzurePixelSkyDynamicClouds.shader" />
      <None Include="Assets\Shader\HiddenLensFlareCreate.shader" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\AzureSDFMoon.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\AzureProjectedFogScattering.shader" />
      <None Include="Assets\Shader\PlayWay WaterVariationsWater _ALPHABLEND_ON _CUBEMAP_REFLECTIONS _INCLUDE_SLOPE_VARIANCE _NORMALMAP _PLANAR_REFLECTIONS_HQ _VOLUMETRIC_LIGHTING _WATER_REFRACTION _WAVES_FFT.shader" />
      <None Include="Assets\Shader\Shader ForgeWalls.shader" />
      <None Include="Assets\DRMContent\Rock1_desc.txt" />
      <None Include="Assets\Shader\HiddenFXAA Preset 3.shader" />
      <None Include="Assets\Shader\PlayWay WaterDepthCopyMix.shader" />
      <None Include="Assets\Shader\HiddenSunShaftsComposite.shader" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\AzureVertexSkyDynamicClouds.shader" />
      <None Include="Assets\Shader\PlayWay WaterStandard Volume.shader" />
      <None Include="Assets\Resources\fxaa.shader" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\AzureMoonSphere.shader" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\PrecomputedFogScattering.shader" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\AzureRealisticFogScattering.shader" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Scenes\-ReadMe-.txt" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\PrecomputedVertexSky.shader" />
      <None Include="Assets\Shader\PlayWay WaterVolumesFront.shader" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
      <None Include="Assets\Shader\Shader ForgeDepthTest.shader" />
      <None Include="Assets\Shader\PlayWay WaterVariationsWater _ALPHABLEND_ON _CUBEMAP_REFLECTIONS _INCLUDE_SLOPE_VARIANCE _NORMALMAP _PLANAR_REFLECTIONS _VOLUMETRIC_LIGHTING _WATER_REFRACTION _WAVES_FFT.shader" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Documentation\ReadMe.txt" />
      <None Include="Assets\Shader\PlayWay WaterVariationsWater Volume _ALPHABLEND_ON _CUBEMAP_REFLECTIONS _VOLUMETRIC_LIGHTING _WATER_REFRACTION _WAVES_FFT.shader" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\Shader\HiddenSSAA.shader" />
      <None Include="Assets\Resources\histogramrender.shader" />
      <None Include="Assets\Shader\HiddenBlurAndFlares.shader" />
      <None Include="Assets\Shader\WaterTessellation.cginc" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\Water5.shader" />
      <None Include="Assets\Shader\azure[Sky]azure[Moon].shader" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\Shader\azure[Sky]azure[Fog].shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Resources\medianfilter.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Shader\Shader ForgePalmtree.shader" />
      <None Include="Assets\Shader\PlayWay WaterSpectrumWater Spectrum.shader" />
      <None Include="Assets\Shader\HiddenFXAA Preset 2.shader" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\PrecomputedPixelSky.shader" />
      <None Include="Assets\Shader\HiddenBlendForBloom.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\Shader\HiddenNFAA.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\Resources\smaa.shader" />
      <None Include="Assets\Shader\PlayWay WaterStandard.shader" />
+     <None Include="Assets\SonyExamples\Vita\CommonDialog\SonyVitaCommonDialogReadme.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\AzurePixelSkyStaticCloud.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\AzurePixelSky.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\Shader\PlayWay WaterUtilitiesFFT Utilities.shader" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>D:/PSVITA/Unity Projects/git/New folder/raft_vita/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>D:/PSVITA/Unity Projects/git/New folder/bs/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/PSVITA/Unity Projects/git/New folder/raft_vita/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>D:/PSVITA/Unity Projects/git/New folder/bs/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>D:/PSVITA/Unity Projects/git/New folder/raft_vita/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>D:/PSVITA/Unity Projects/git/New folder/bs/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/PSVITA/Unity Projects/git/New folder/raft_vita/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>D:/PSVITA/Unity Projects/git/New folder/bs/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.AIModule.dll</HintPath>
@@ -659,6 +647,12 @@
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
+ <Reference Include="SonyNP">
+ <HintPath>D:/PSVITA/Unity Projects/git/New folder/bs/Assets/SonyAssemblies/SonyNP.dll</HintPath>
+ </Reference>
+ <Reference Include="SonyVitaCommonDialog">
+ <HintPath>D:/PSVITA/Unity Projects/git/New folder/bs/Assets/SonyAssemblies/SonyVitaCommonDialog.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>C:/Users/ajxcf/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
  </Reference>
@@ -692,6 +686,10 @@
  <Reference Include="Boo.Lang">
  <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{BD00984E-452A-7DBB-534D-9440353D5E78}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

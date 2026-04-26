@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 04a4030c692ecc64ea9a242745602a67
-timeCreated: 1649264578
-licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: BuildItemsBig_Foundation
@@ -12,7 +10,7 @@ TextureImporter:
     21300010: BuildItemsBig_Wall
     21300012: BuildItemsBig_Repair
   externalObjects: {}
-  serializedVersion: 4
+  serializedVersion: 7
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
@@ -30,6 +28,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -60,12 +60,14 @@ TextureImporter:
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -74,8 +76,9 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Standalone
-    maxTextureSize: 256
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -84,8 +87,9 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: PSP2
-    maxTextureSize: 256
+  - serializedVersion: 2
+    buildTarget: PSP2
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -120,6 +124,12 @@ TextureImporter:
         - {x: 24, y: -53.00989}
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 75ebb576e9ce5974a8c8b382f55f251e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: BuildItemsBig_Pillar
       rect:
@@ -143,6 +153,12 @@ TextureImporter:
         - {x: 12.524687, y: -57.000004}
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 5266e3e12d706a044865803025437dba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: BuildItemsBig_Ramp
       rect:
@@ -163,6 +179,12 @@ TextureImporter:
         - {x: 63.980442, y: -22.024685}
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: f1a87a140efccaf4e95c35bddc848729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: BuildItemsBig_Floor
       rect:
@@ -185,6 +207,12 @@ TextureImporter:
         - {x: 12.516609, y: -57.02469}
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8c26c77643c5c6946a34bd7ddadd3428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: BuildItemsBig_WallWindow
       rect:
@@ -208,6 +236,12 @@ TextureImporter:
         - {x: 31.485, y: -49.51241}
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: b3ff810ab2c6db14785752c42484feea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: BuildItemsBig_Wall
       rect:
@@ -231,6 +265,12 @@ TextureImporter:
         - {x: -15.514999, y: -57.5124}
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 53d423cc5af4a7f4fbf8e53f4b06352f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: BuildItemsBig_Repair
       rect:
@@ -257,9 +297,23 @@ TextureImporter:
         - {x: 44.012386, y: -52.500004}
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: bf787678e9a94e84d81e4094beae660c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
+    bones: []
+    spriteID: 
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

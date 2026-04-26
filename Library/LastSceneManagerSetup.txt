@@ -1,4 +1,7 @@
 sceneSetups:
 - path: Assets/Scene/Scenes/Semihs scener/MainMenuScene.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Azure[Sky] Dynamic Skybox/Scenes/Default.unity
   isLoaded: 1
   isActive: 1

@@ -38,6 +38,12 @@ public class StartMenuScreen : MonoBehaviour
 
 	public GameObject yesnoLayout;
 
+    public GameObject thxLayout;
+
+    public GameObject creditButton;
+
+    public GameObject closeCreditButton;
+
 	private SavedGameButton selectedButton;
 
 	private void Start()
@@ -45,6 +51,9 @@ public class StartMenuScreen : MonoBehaviour
 		Time.timeScale = 1f;
 		selection.gameObject.SetActive(false);
 		yesnoLayout.SetActive(false);
+        thxLayout.SetActive(false);
+        creditButton.SetActive(true);
+        closeCreditButton.SetActive(false);
 		NewGameBack();
 		LoadInSavedGames();
 	}
@@ -169,7 +178,27 @@ public class StartMenuScreen : MonoBehaviour
 		SingletonGeneric<Settings>.Singleton.OptionsMenu.Enter();
 	}
 
-	public void ExitApplication()
+    public void CreditButton()
+    {
+        newGameLayout.SetActive(false);
+        standardLayout.SetActive(false);
+        yesnoLayout.SetActive(false);
+        thxLayout.SetActive(true);
+        creditButton.SetActive(false);
+        closeCreditButton.SetActive(true);
+    }
+
+    public void ExitCreditButton()
+    {
+        newGameLayout.SetActive(false);
+        standardLayout.SetActive(true);
+        yesnoLayout.SetActive(false);
+        thxLayout.SetActive(false);
+        creditButton.SetActive(true);
+        closeCreditButton.SetActive(false);
+    }
+
+    public void ExitApplication()
 	{
 		Application.Quit();
 	}

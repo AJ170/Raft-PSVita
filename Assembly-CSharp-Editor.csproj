@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{745EED99-A08D-D1FA-B2C6-6CA7DC3EADB2}</ProjectGuid>
+    <ProjectGuid>{5010FCB4-B857-8A96-2A0C-4AFF6400C803}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -53,19 +53,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Editor\AzureSkyControllerEditor.cs" />
      <Compile Include="Assets\Editor\ExportDRMPackages.cs" />
      <Compile Include="Assets\Editor\SetPlatformOptionsPSP2.cs" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>D:/PSVITA/Unity Projects/git/New folder/raft_vita/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>D:/PSVITA/Unity Projects/git/New folder/bs/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/PSVITA/Unity Projects/git/New folder/raft_vita/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>D:/PSVITA/Unity Projects/git/New folder/bs/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>D:/PSVITA/Unity Projects/git/New folder/raft_vita/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>D:/PSVITA/Unity Projects/git/New folder/bs/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/PSVITA/Unity Projects/git/New folder/raft_vita/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>D:/PSVITA/Unity Projects/git/New folder/bs/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.AIModule.dll</HintPath>
@@ -307,6 +308,12 @@
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="SonyNP">
+ <HintPath>D:/PSVITA/Unity Projects/git/New folder/bs/Assets/SonyAssemblies/SonyNP.dll</HintPath>
+ </Reference>
+ <Reference Include="SonyVitaCommonDialog">
+ <HintPath>D:/PSVITA/Unity Projects/git/New folder/bs/Assets/SonyAssemblies/SonyVitaCommonDialog.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Users/ajxcf/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -351,8 +358,12 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{BD00984E-452A-7DBB-534D-9440353D5E78}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{4E02ECA1-1036-1A58-8066-38F38803CFAA}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{A00A03ED-0B00-9855-6F38-21663B9FB6A2}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
+      <Project>{6A151FE9-2F64-CCFA-FF11-E745EC7F4F25}</Project>      <Name>Assembly-CSharp-Editor-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

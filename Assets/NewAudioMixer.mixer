@@ -3,7 +3,7 @@
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: NewAudioMixer
   m_OutputGroup: {fileID: 0}
@@ -28,7 +28,7 @@ AudioMixerController:
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Master
   m_AudioMixer: {fileID: 24100000}
@@ -50,7 +50,7 @@ AudioMixerGroupController:
 --- !u!244 &24400004
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_EffectID: bdebb38a9fed8494dbc5c3d9d3f29496
@@ -63,7 +63,7 @@ AudioMixerEffectController:
 --- !u!245 &24500006
 AudioMixerSnapshotController:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Snapshot
   m_AudioMixer: {fileID: 24100000}
@@ -73,7 +73,7 @@ AudioMixerSnapshotController:
 --- !u!243 &243075218177903440
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: VolumeSFX
   m_AudioMixer: {fileID: 24100000}
@@ -90,7 +90,7 @@ AudioMixerGroupController:
 --- !u!243 &243262833602960790
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: VolumeMaster
   m_AudioMixer: {fileID: 24100000}
@@ -107,7 +107,7 @@ AudioMixerGroupController:
 --- !u!243 &243376433419479398
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: VolumeMusic
   m_AudioMixer: {fileID: 24100000}
@@ -124,7 +124,7 @@ AudioMixerGroupController:
 --- !u!243 &243662287858140640
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: VolumeAmbience
   m_AudioMixer: {fileID: 24100000}
@@ -141,7 +141,7 @@ AudioMixerGroupController:
 --- !u!243 &243801216939806036
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: VolumeUI
   m_AudioMixer: {fileID: 24100000}
@@ -158,7 +158,7 @@ AudioMixerGroupController:
 --- !u!244 &244208515569412488
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_EffectID: 163427417b5efec4c9905a84a4963c21
@@ -171,7 +171,7 @@ AudioMixerEffectController:
 --- !u!244 &244299606285476656
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_EffectID: a0d6583887b5bf14ebbc08948de7fdc5
@@ -184,7 +184,7 @@ AudioMixerEffectController:
 --- !u!244 &244621661844485746
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_EffectID: 1608c7103f5444a4da262f21c0065d46
@@ -197,7 +197,7 @@ AudioMixerEffectController:
 --- !u!244 &244638852849003554
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_EffectID: a8bfe05edd496284c8b2f0140366865a
@@ -210,7 +210,7 @@ AudioMixerEffectController:
 --- !u!244 &244725402799375066
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_EffectID: 3062d543caaecf54582319a14bf0289d

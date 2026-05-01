@@ -28,5 +28,6 @@ public class DeathMenu : SingletonGeneric<DeathMenu>
 		Helper.SetCursorVisibleAndLockState(true, CursorLockMode.None);
 		canvasGame.SetActive(false);
 		deathMenuParent.SetActive(true);
+		PSVitaControllerMouse.Instance.ShowCursor();
 	}
 }

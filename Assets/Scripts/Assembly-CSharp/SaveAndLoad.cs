@@ -10,6 +10,8 @@ public class SaveAndLoad : SingletonGeneric<SaveAndLoad>
 	[HideInInspector]
 	public string Path;
 
+	private MusicPlayer musicPlayer;
+
 	[HideInInspector]
 	public string[] SavedGameNames;
 
@@ -30,6 +32,7 @@ public class SaveAndLoad : SingletonGeneric<SaveAndLoad>
         Path = Application.persistentDataPath + "/SavedGames/";
 #endif
        // Path = Application.persistentDataPath + "/SavedGames/";
+       musicPlayer = FindObjectOfType<MusicPlayer>();
 		try
 		{
 			if (!Directory.Exists(Path))
@@ -55,6 +58,12 @@ public class SaveAndLoad : SingletonGeneric<SaveAndLoad>
 
 		string jsontext = JsonUtility.ToJson(graph);
 		PlayerPrefs.SetString(GameManager.CurrentGameFileName, jsontext);
+		if (musicPlayer != null)
+		{
+			MusicPlayer.MusicSaveData musicData = musicPlayer.GetSaveData();
+			string musicJson = JsonUtility.ToJson(musicData);
+			PlayerPrefs.SetString(GameManager.CurrentGameFileName + "_Music", musicJson);
+		}
 
 		BinaryFormatter binaryFormatter = new BinaryFormatter();
 		FileStream fileStream = File.Create(Path + GameManager.CurrentGameFileName);
@@ -76,7 +85,12 @@ public class SaveAndLoad : SingletonGeneric<SaveAndLoad>
 				Debug.Log("Load Map: Success");
 			}
 		}
-
+		if (musicPlayer != null && PlayerPrefs.HasKey(GameManager.CurrentGameFileName + "_Music"))
+		{
+			string musicJson = PlayerPrefs.GetString(GameManager.CurrentGameFileName + "_Music");
+			MusicPlayer.MusicSaveData loadedMusicData = JsonUtility.FromJson<MusicPlayer.MusicSaveData>(musicJson);
+			musicPlayer.LoadSaveData(loadedMusicData);
+		}
 		if (File.Exists(Path + GameManager.CurrentGameFileName))
 		{
 			BinaryFormatter binaryFormatter = new BinaryFormatter();
@@ -119,8 +133,16 @@ public class SaveAndLoad : SingletonGeneric<SaveAndLoad>
 		RGD_Game rGD_Game = new RGD_Game();
 		rGD_Game.globalRaftTimeOffset = GameManager.singleton.globalRaftParent.GetComponent<BobTransform>().timeOffset;
 		rGD_Game.globalRaftSerializableTransform = new SerializableTransform(GameManager.singleton.globalRaftParent);
-		rGD_Game.sky = new RGD_Sky(GameManager.singleton.skyController);
-		List<Block> allPlacedBlocks = UnityEngine.Object.FindObjectOfType<BlockPlacer>().allPlacedBlocks;
+        //rGD_Game.sky = new RGD_Sky(GameManager.singleton.skyController);
+        if (GameManager.singleton.skyController != null)
+        {
+            rGD_Game.sky = new RGD_Sky(GameManager.singleton.skyController);
+        }
+        else
+        {
+            rGD_Game.sky = null;
+        }
+        List<Block> allPlacedBlocks = UnityEngine.Object.FindObjectOfType<BlockPlacer>().allPlacedBlocks;
 		for (int i = 0; i < allPlacedBlocks.Count; i++)
 		{
 			RGD_Block rGD_Block = new RGD_Block();
@@ -185,7 +207,7 @@ public class SaveAndLoad : SingletonGeneric<SaveAndLoad>
 
 	private void RestoreRGDGame(RGD_Game game)
 	{
-		if (game.sky != null)
+		if (game.sky != null && GameManager.singleton.skyController != null)
 		{
 			game.sky.RestoreSky(GameManager.singleton.skyController);
 		}

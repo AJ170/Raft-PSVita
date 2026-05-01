@@ -73,7 +73,7 @@ public class BlockPlacer : SingletonGeneric<BlockPlacer>
 		{
 			return;
 		}
-		SelectBlock(blockFromType);
+		SelectBlock(blockFromType);//
 		selectedQuad = AquireQuadAtCursor();
 		aimingAtQuad = selectedQuad != null;
 		bool flag = selectedQuad != null && selectedQuad.AcceptsBlock(selectedBlock);
@@ -238,16 +238,33 @@ public class BlockPlacer : SingletonGeneric<BlockPlacer>
 		{
 			return;
 		}
-		string text = selectedBlock.displayName;
+		string text = "";
+		bool showTButton = false;
 		if (selectedBlock.isRotateable)
 		{
-			text += "\n'R' to rotate";
+			showTButton = true;
+			text = " to rotate";
 			if (selectedBlock.canRotateFreely)
 			{
 				text += ", hold for smooth rotation";
 			}
+
+			text += "\n" + selectedBlock.displayName;
 		}
-		CanvasHelper.singleton.SetDisplayText(text);
+
+		/*string text = selectedBlock.displayName;
+		bool showTButton = false;
+		if (selectedBlock.isRotateable)
+		{
+			showTButton = true;
+			text += " to rotate";
+			if (selectedBlock.canRotateFreely)
+			{
+				text += ", hold for smooth rotation";
+			}
+		}*/
+		CanvasHelper.singleton.SetDisplayText(text, showTButton);
+		//CanvasHelper.singleton.SetDisplayText(showEButton);
 	}
 
 	private void SelectBlock(Block block)
@@ -264,7 +281,10 @@ public class BlockPlacer : SingletonGeneric<BlockPlacer>
 			{
 				ghostBlock.Rotate(Vector3.up, currentRotationY, Space.Self);
 			}
-			selectedBlock.OnStartingPlacement();
+            
+                selectedBlock.OnStartingPlacement();
+            
+           // selectedBlock.OnStartingPlacement();
 			if (selectedBlock.overlappingComponent != null)
 			{
 				selectedBlock.overlappingComponent.SetNewMaterial(ghostMaterial);

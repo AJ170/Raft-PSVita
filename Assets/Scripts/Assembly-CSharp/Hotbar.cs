@@ -106,7 +106,15 @@ public class Hotbar : MonoBehaviour
 		{
 			slotIndex++;
 		}
-		if (axis > 0f || axis < 0f)
+		if (Input.GetButtonDown("DPad Left"))
+		{
+			slotIndex--;
+		}
+		else if (Input.GetButtonDown("DPad Right"))
+		{
+			slotIndex++;
+		}
+		if (axis > 0f || axis < 0f || Input.GetButtonDown("DPad Left") || Input.GetButtonDown("DPad Right"))
 		{
 			int hotslotCount = PlayerInventory.Singleton.hotslotCount;
 			if (slotIndex > hotslotCount - 1)

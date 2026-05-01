@@ -43,11 +43,21 @@ public class PersonController : MonoBehaviour
 
 	private void Update()
 	{
+		if (PSVitaControllerMouse.IsCursorActive)
+		{
+			moving = false;
+			sprinting = false;
+			return; // ← early exit, no movement, no jumping, no footsteps
+		}
 		moving = controller.velocity.magnitude > 0.8f;
 		inWater = (double)waterChecker.position.y < -0.35;
 		sprinting = Input.GetButton("Sprint");
-		Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
-		if (direction.x > 0f && direction.z > 0f)
+#if UNITY_PSP2 && !UNITY_EDITOR
+        Vector3 direction = new Vector3(Input.GetAxis("Left Joystick Horizontal"), 0f, Input.GetAxis("Left Joystick Vertical"));
+#else
+        Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
+#endif
+        if (direction.x > 0f && direction.z > 0f)
 		{
 			direction.Normalize();
 		}

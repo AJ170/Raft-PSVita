@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -14,9 +15,9 @@ public class PauseMenu : MonoBehaviour
 
 	public Button saveButton;
 
-	public Text saveButtonText;
+    public TextMeshProUGUI saveButtonText;
 
-	private bool hasSavedGame;
+    private bool hasSavedGame;
 
 	private ExitMethod exitMethod;
 
@@ -32,7 +33,7 @@ public class PauseMenu : MonoBehaviour
 		{
 			GameManager.IsInMenu = true;
 		}
-		if (Input.GetKeyDown(KeyCode.JoystickButton7))
+		if (Input.GetKeyDown(KeyCode.JoystickButton7) || Input.GetKeyDown(KeyCode.Escape))
 		{
 			if (!IsOpen)
 			{
@@ -71,8 +72,9 @@ public class PauseMenu : MonoBehaviour
 		}
 		else
 		{
+			PSVitaControllerMouse.Instance.ShowCursor();
 			SingletonGeneric<SoundManager>.Singleton.PlaySound("UIClick");
-			SceneManager.LoadScene("MainMenuScene");
+			SceneManager.LoadScene("MainMenuScene");//
 			Time.timeScale = 1f;
 		}
 	}
@@ -113,22 +115,28 @@ public class PauseMenu : MonoBehaviour
 		if (!GameManager.IsInMenu)
 		{
 			IsOpen = true;
-			Helper.SetCursorVisibleAndLockState(true, CursorLockMode.None);
-			Time.timeScale = 0f;
+			//Helper.SetCursorVisibleAndLockState(true, CursorLockMode.None);
+			//Time.timeScale = 0f;
 			pauseMenuParent.SetActive(true);
+			PSVitaControllerMouse.Instance.ShowCursor();
 		}
 	}
 
 	public void CloseMenu()
 	{
-		Time.timeScale = 1f;
+		//Time.timeScale = 1f;
 		IsOpen = false;
 		GameManager.IsInMenu = false;
-		Helper.SetCursorVisibleAndLockState(false, CursorLockMode.Locked);
+		//Helper.SetCursorVisibleAndLockState(false, CursorLockMode.Locked);
 		exitMethod = null;
 		pauseMenuParent.SetActive(false);
 		SetYesNoSaveLayout(false);
 		hasSavedGame = false;
+		// Only hide cursor if the inventory is also closed
+		if (!CanvasHelper.singleton.IsMenuOpen())
+		{
+			PSVitaControllerMouse.Instance.HideCursor();
+		}
 	}
 
 	public void OpenOptionMenu()

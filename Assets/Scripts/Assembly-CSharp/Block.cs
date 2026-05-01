@@ -51,7 +51,7 @@ public class Block : MonoBehaviour
 	[Header("On/Off colliders... Off when placing")]
 	public Collider[] onoffColliders;
 
-	[HideInInspector]
+	//[HideInInspector]
 	[Space(20f)]
 	public OccupyingComponent overlappingComponent;
 

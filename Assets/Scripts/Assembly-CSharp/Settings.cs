@@ -5,7 +5,13 @@ using UnityStandardAssets.ImageEffects;
 
 public class Settings : SingletonGeneric<Settings>
 {
+	public Slider musicVolumeSlider;        // assign in inspector
+	public MusicPlayer musicPlayer;
+	public Slider cursorSensitivitySlider;
+	
 	private float mouseSensitivity;
+	
+	private float cursorSensitivity;
 
 	private bool invertYAxis;
 
@@ -31,6 +37,39 @@ public class Settings : SingletonGeneric<Settings>
 
 	private OptionsMenu optionsMenu;
 
+	private void OnEnable()
+	{
+		// Find the MusicPlayer if we don't have it yet
+		if (musicPlayer == null)
+			musicPlayer = FindObjectOfType<MusicPlayer>();
+		if (cursorSensitivitySlider != null)
+		{
+			cursorSensitivitySlider.onValueChanged.RemoveAllListeners();
+			cursorSensitivitySlider.value = cursorSensitivity;
+			cursorSensitivitySlider.onValueChanged.AddListener(OnCursorSensitivityChanged);
+		}
+
+		if (musicVolumeSlider != null && musicPlayer != null)
+		{
+			// Important: remove old listeners first to prevent stacking
+			musicVolumeSlider.onValueChanged.RemoveAllListeners();
+
+			// Set the slider to the actual current volume
+			musicVolumeSlider.value = musicPlayer.Volume;
+
+			// Now add the listener
+			musicVolumeSlider.onValueChanged.AddListener(musicPlayer.SetVolume);
+		}
+	}
+
+	private void OnDisable()
+	{
+		if (musicVolumeSlider != null)
+			musicVolumeSlider.onValueChanged.RemoveAllListeners();
+		if (cursorSensitivitySlider != null)
+			cursorSensitivitySlider.onValueChanged.RemoveAllListeners();
+	}
+	
 	public float MouseSensitivty
 	{
 		get
@@ -41,6 +80,12 @@ public class Settings : SingletonGeneric<Settings>
 		{
 			mouseSensitivity = value;
 		}
+	}
+	
+	public float CursorSensitivity
+	{
+		get { return cursorSensitivity; }
+		private set { cursorSensitivity = value; }
 	}
 
 	public bool InvertYAxis
@@ -103,7 +148,7 @@ public class Settings : SingletonGeneric<Settings>
 		}
 	}
 
-	public float MusicVolume
+	/*public float MusicVolume
 	{
 		get
 		{
@@ -113,7 +158,7 @@ public class Settings : SingletonGeneric<Settings>
 		{
 			musicVolume = value;
 		}
-	}
+	}*/
 
 /*	public int WaterQuality
 	{
@@ -190,48 +235,65 @@ public class Settings : SingletonGeneric<Settings>
 
 	private void Awake()
 	{
-		Object.DontDestroyOnLoad(base.gameObject);
-		LoadSettings();
+        if (UnityEngine.Object.FindObjectOfType<Settings>() != this)
+        {
+            UnityEngine.Object.Destroy(base.gameObject);
+            return;
+        }
+        UnityEngine.Object.DontDestroyOnLoad(base.gameObject);
+        LoadSettings();
 	}
 
 	public void SetMouseSensitivty(Slider slider)
 	{
 		MouseSensitivty = slider.value;
+		SaveSettings();
+	}
+	
+	private void OnCursorSensitivityChanged(float value)
+	{
+		CursorSensitivity = value;
+		SaveSettings();
 	}
 
 	public void SetInvertYAxis(Toggle toggle)
 	{
 		InvertYAxis = toggle.isOn;
+		SaveSettings();
 	}
 
 	public void SetMasterVolume(Slider slider)
 	{
 		MasterVolume = slider.value;
 		OptionsMenu.mixer.SetFloat("VolumeMaster", MasterVolume);
+		SaveSettings();
 	}
 
 	public void SetAmbienceVolume(Slider slider)
 	{
 		AmbienceVolume = slider.value;
 		OptionsMenu.mixer.SetFloat("VolumeAmbience", AmbienceVolume);
+		SaveSettings();
 	}
 
 	public void SetSFXVolume(Slider slider)
 	{
 		SFXVolume = slider.value;
 		OptionsMenu.mixer.SetFloat("VolumeSFX", SFXVolume);
+		SaveSettings();
 	}
 
-	public void SetMusicVolume(Slider slider)
+	/*public void SetMusicVolume(Slider slider)
 	{
 		MusicVolume = slider.value;
 		OptionsMenu.mixer.SetFloat("VolumeMusic", MusicVolume);
-	}
+	}*/
 
 	public void SetUIVolume(Slider slider)
 	{
 		UIVolume = slider.value;
 		OptionsMenu.mixer.SetFloat("VolumeUI", UIVolume);
+		SaveSettings();
 	}
 
 	/*public void SetWaterQuality(Slider slider)
@@ -267,11 +329,12 @@ public class Settings : SingletonGeneric<Settings>
 	public void SaveSettings()
 	{
 		PlayerPrefs.SetFloat("MouseSensitivity", MouseSensitivty);
+		PlayerPrefs.SetFloat("CursorSensitivity", CursorSensitivity);
 		PlayerPrefs.SetInt("InvertYAxis", InvertYAxis ? 1 : 0);
 		PlayerPrefs.SetFloat("MasterVolume", MasterVolume);
 		PlayerPrefs.SetFloat("AmbienceVolume", AmbienceVolume);
 		PlayerPrefs.SetFloat("SFXVolume", SFXVolume);
-		PlayerPrefs.SetFloat("MusicVolume", MusicVolume);
+		//PlayerPrefs.SetFloat("MusicVolume", MusicVolume);
 		PlayerPrefs.SetFloat("UIVolume", UIVolume);
 		/*PlayerPrefs.SetInt("WaterQuality", WaterQuality);
 		PlayerPrefs.SetInt("AmbientOcclusion", AmbientOcclusion ? 1 : 0);
@@ -284,17 +347,20 @@ public class Settings : SingletonGeneric<Settings>
 	{
 		MouseSensitivty = PlayerPrefs.GetFloat("MouseSensitivity", 2.25f);
 		InvertYAxis = PlayerPrefs.GetInt("InvertYAxis", 0) == 1;
+		CursorSensitivity = PlayerPrefs.GetFloat("CursorSensitivity", 650f);
 		OptionsMenu.MouseSensitivitySlider.value = MouseSensitivty;
 		OptionsMenu.InvertYAxisToggle.isOn = InvertYAxis;
+		if (cursorSensitivitySlider != null)
+			cursorSensitivitySlider.value = CursorSensitivity;
 		MasterVolume = PlayerPrefs.GetFloat("MasterVolume", 0f);
 		AmbienceVolume = PlayerPrefs.GetFloat("AmbienceVolume", 0f);
 		SFXVolume = PlayerPrefs.GetFloat("SFXVolume", 0f);
-		MusicVolume = PlayerPrefs.GetFloat("MusicVolume", 0f);
+		//MusicVolume = PlayerPrefs.GetFloat("MusicVolume", -10f);
 		UIVolume = PlayerPrefs.GetFloat("UIVolume", 0f);
 		OptionsMenu.masterVolumeSlider.value = MasterVolume;
 		OptionsMenu.ambienceVolumeSlider.value = AmbienceVolume;
 		OptionsMenu.sfxVolumeSlider.value = SFXVolume;
-		OptionsMenu.musicVolumeSlider.value = MusicVolume;
+		//OptionsMenu.musicVolumeSlider.value = MusicVolume;
 		OptionsMenu.uiVolumeSlider.value = UIVolume;
 		Invoke("SetMixerParameters", 0.001f);
 		//WaterQuality = PlayerPrefs.GetInt("WaterQuality", 5);
@@ -319,7 +385,7 @@ public class Settings : SingletonGeneric<Settings>
 		OptionsMenu.mixer.SetFloat("VolumeMaster", MasterVolume);
 		OptionsMenu.mixer.SetFloat("VolumeAmbience", AmbienceVolume);
 		OptionsMenu.mixer.SetFloat("VolumeSFX", SFXVolume);
-		OptionsMenu.mixer.SetFloat("VolumeMusic", MusicVolume);
+		//OptionsMenu.mixer.SetFloat("VolumeMusic", MusicVolume);
 		OptionsMenu.mixer.SetFloat("VolumeUI", UIVolume);
 	}
 

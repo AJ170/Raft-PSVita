@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerInventory : Inventory
 {
@@ -21,9 +22,9 @@ public class PlayerInventory : Inventory
 	public InventoryPickup inventoryPickup;
 
 	[Header("Item description")]
-	public Text itemNameText;
+	public TextMeshProUGUI itemNameText;
 
-	public Text itemDescriptionText;
+	public TextMeshProUGUI itemDescriptionText;
 
 	public Image itemImage;
 
@@ -38,12 +39,16 @@ public class PlayerInventory : Inventory
 			Object.Destroy(base.gameObject);
 		}
 		base.Awake();
-		Text text = itemNameText;
+        /*Text text = itemNameText;
 		string empty = string.Empty;
 		itemDescriptionText.text = empty;
 		text.text = empty;
-		itemImage.enabled = false;
-	}
+		itemImage.enabled = false;*/
+        string empty = string.Empty;
+        itemDescriptionText.text = empty;
+        itemNameText.text = empty;
+        itemImage.enabled = false;
+    }
 
 	protected override void CreateSlots()
 	{
@@ -104,15 +109,22 @@ public class PlayerInventory : Inventory
 			itemImage.enabled = true;
 			itemImage.sprite = iItem.sprite;
 		}
-		else if (slot == null)
+        /*else if (slot == null)
 		{
 			Text text = itemNameText;
 			string empty = string.Empty;
 			itemDescriptionText.text = empty;
 			text.text = empty;
 			itemImage.enabled = false;
-		}
-	}
+		}*/
+        else if (slot == null)
+        {
+            string empty = string.Empty;
+            itemDescriptionText.text = empty;
+            itemNameText.text = empty;
+            itemImage.enabled = false;
+        }
+    }
 
 	public RemoveResult RemoveSelectedHotSlotItem(int amount)
 	{

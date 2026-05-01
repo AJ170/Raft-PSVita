@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ItemCostBox : MonoBehaviour
 {
-	public Text costLabel;
+	public TextMeshProUGUI costLabel;
 
 	public Image itemImage;
 

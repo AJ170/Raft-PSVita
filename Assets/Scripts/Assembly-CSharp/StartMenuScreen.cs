@@ -44,6 +44,8 @@ public class StartMenuScreen : MonoBehaviour
 
     public GameObject closeCreditButton;
 
+    public GameObject newsFeed;
+
 	private SavedGameButton selectedButton;
 
 	private void Start()
@@ -101,40 +103,42 @@ public class StartMenuScreen : MonoBehaviour
 
 	public void NewGame()
 	{
-		SingletonGeneric<SoundManager>.Singleton.PlaySound("UIClick");
-		standardLayout.SetActive(false);
+        OptionsMenu.PlayUIClick();
+        standardLayout.SetActive(false);
 		newGameLayout.SetActive(true);
 	}
 
 	public void NewGameBack()
 	{
-		SingletonGeneric<SoundManager>.Singleton.PlaySound("UIClick");
-		standardLayout.SetActive(true);
+        standardLayout.SetActive(true);
 		newGameLayout.SetActive(false);
 	}
 
 	public void NewGameCreate()
 	{
-		SingletonGeneric<SoundManager>.Singleton.PlaySound("UIClick");
-		GameManager.CurrentGameFileName = newGameInput.text + ".rgd";
+        OptionsMenu.PlayUIClick();
+        GameManager.CurrentGameFileName = newGameInput.text + ".rgd";
 		GameManager.IsInNewGame = true;
+		PSVitaControllerMouse.Instance.HideCursor();
 		PlayScene("MainScene");
 	}
 
 	public void PlaySelected()
 	{
-		SingletonGeneric<SoundManager>.Singleton.PlaySound("UIClick");
-		if (selectedButton != null)
+        OptionsMenu.PlayUIClick();
+        if (selectedButton != null)
 		{
 			GameManager.CurrentGameFileName = selectedButton.savedGameName;
 			GameManager.IsInNewGame = false;
+			PSVitaControllerMouse.Instance.HideCursor();
 			PlayScene("MainScene");
 		}
 	}
 
 	public void DeleteSelected()
 	{
-		if (selectedButton != null && File.Exists(SingletonGeneric<SaveAndLoad>.Singleton.Path + selectedButton.savedGameName))
+        OptionsMenu.PlayUIClick();
+        if (selectedButton != null && File.Exists(SingletonGeneric<SaveAndLoad>.Singleton.Path + selectedButton.savedGameName))
 		{
 			File.Delete(SingletonGeneric<SaveAndLoad>.Singleton.Path + selectedButton.savedGameName);
 			selectedButton = null;
@@ -146,8 +150,8 @@ public class StartMenuScreen : MonoBehaviour
 
 	public void Select(SavedGameButton button)
 	{
-		SingletonGeneric<SoundManager>.Singleton.PlaySound("UIClick");
-		if (button != null)
+        OptionsMenu.PlayUIClick();
+        if (button != null)
 		{
 			selectedButton = button;
 			selection.gameObject.SetActive(true);
@@ -156,7 +160,8 @@ public class StartMenuScreen : MonoBehaviour
 
 	public void DeleteButton()
 	{
-		if (!(selectedButton == null))
+        OptionsMenu.PlayUIClick();
+        if (!(selectedButton == null))
 		{
 			yesnoLayout.SetActive(true);
 			standardLayout.SetActive(false);
@@ -168,34 +173,42 @@ public class StartMenuScreen : MonoBehaviour
 	{
 		yesnoLayout.SetActive(false);
 		standardLayout.SetActive(true);
-	}
+        OptionsMenu.PlayUIClick();
+    }
 
 	public void OptionsButton()
 	{
 		newGameLayout.SetActive(false);
 		standardLayout.SetActive(false);
 		yesnoLayout.SetActive(false);
+        creditButton.SetActive(false);
+        newsFeed.SetActive(false);
 		SingletonGeneric<Settings>.Singleton.OptionsMenu.Enter();
-	}
+        SingletonGeneric<SoundManager>.Singleton.PlaySound("UIClick");
+    }
 
     public void CreditButton()
     {
+        OptionsMenu.PlayUIClick();
         newGameLayout.SetActive(false);
         standardLayout.SetActive(false);
         yesnoLayout.SetActive(false);
         thxLayout.SetActive(true);
         creditButton.SetActive(false);
         closeCreditButton.SetActive(true);
+        
     }
 
     public void ExitCreditButton()
     {
+        OptionsMenu.PlayUIClick();
         newGameLayout.SetActive(false);
         standardLayout.SetActive(true);
         yesnoLayout.SetActive(false);
         thxLayout.SetActive(false);
         creditButton.SetActive(true);
         closeCreditButton.SetActive(false);
+        
     }
 
     public void ExitApplication()
@@ -205,8 +218,10 @@ public class StartMenuScreen : MonoBehaviour
 
 	private void PlayScene(string name)
 	{
-		SceneManager.LoadScene(name);
-	}
+        OptionsMenu.PlayUIClick();
+        SceneManager.LoadScene(name);
+        
+    }
 
 	private void LoadInSavedGames()
 	{
@@ -215,7 +230,7 @@ public class StartMenuScreen : MonoBehaviour
 		SingletonGeneric<SaveAndLoad>.Singleton.SavedGameNames = new string[files.Length];
 		List<GameObject> list = new List<GameObject>();
 		IEnumerator enumerator = buttonParent.GetEnumerator();
-		try
+        try
 		{
 			while (enumerator.MoveNext())
 			{

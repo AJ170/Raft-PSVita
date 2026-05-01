@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SelectedRecipeBox : MonoBehaviour
 {
-	public Text recipeLabel;
+	public TextMeshProUGUI recipeLabel;
 
-	public Text recipeDescription;
+	public TextMeshProUGUI recipeDescription;
 
 	public Image recipeImage;
 

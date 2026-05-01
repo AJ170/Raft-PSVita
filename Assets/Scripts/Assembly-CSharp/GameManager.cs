@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 
 	public AzureSky_Controller skyController;
 
-	public Texture2D cursorTexture;
+	//public Texture2D cursorTexture;
 
 	public Transform globalRaftParent;
 
@@ -69,6 +69,6 @@ public class GameManager : MonoBehaviour
 	private void Update()
 	{
 		Helper.Update();
-		Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+		//Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
 	}
 }

@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CanvasHelper : MonoBehaviour
 {
@@ -47,8 +48,10 @@ public class CanvasHelper : MonoBehaviour
 
 	[Header("Others")]
 	public GameObject EButton;
+	
+	public GameObject TButton;
 
-	public Text displayText;
+	public TextMeshProUGUI displayText;
 
 	public GameObject gameOver;
 
@@ -110,13 +113,14 @@ public class CanvasHelper : MonoBehaviour
 
 	public void CloseMenus()
 	{
+		PSVitaControllerMouse.Instance.HideCursor();
 		GameManager.IsInMenu = false;
 		GameObject[] array = menus;
 		foreach (GameObject gameObject in array)
 		{
 			gameObject.SetActive(false);
 		}
-		Helper.SetCursorVisibleAndLockState(false, CursorLockMode.Locked);
+		//Helper.SetCursorVisibleAndLockState(false, CursorLockMode.Locked);
 		if (menuCloseCallstack != null)
 		{
 			menuCloseCallstack();
@@ -125,13 +129,14 @@ public class CanvasHelper : MonoBehaviour
 
 	public void OpenMenus()
 	{
+		PSVitaControllerMouse.Instance.ShowCursor();
 		GameManager.IsInMenu = true;
 		GameObject[] array = menus;
 		foreach (GameObject gameObject in array)
 		{
 			gameObject.SetActive(true);
 		}
-		Helper.SetCursorVisibleAndLockState(true, CursorLockMode.None);
+		//Helper.SetCursorVisibleAndLockState(true, CursorLockMode.None);
 	}
 
 	public void SetHealthGlow(float normal)
@@ -206,9 +211,13 @@ public class CanvasHelper : MonoBehaviour
 		{
 			EButton.SetActive(state);
 		}
+		if ((bool)TButton)
+		{
+			TButton.SetActive(state);
+		}
 	}
 
-	public void SetDisplayText(string message, bool showEButton = false)
+	public void SetDisplayText(string message, bool showEButton = false, bool showTButton = false)
 	{
 		if (displayText != null)
 		{
@@ -219,10 +228,24 @@ public class CanvasHelper : MonoBehaviour
 		{
 			EButton.SetActive(showEButton);
 		}
+
+		if (TButton != null)
+		{
+			TButton.SetActive(showTButton);
+		}
 	}
 
 	public void SetGameOver(bool state)
 	{
 		gameOver.SetActive(state);
+	}
+	public bool IsMenuOpen()
+	{
+		foreach (GameObject menu in menus)
+		{
+			if (menu.activeSelf)
+				return true;
+		}
+		return false;
 	}
 }

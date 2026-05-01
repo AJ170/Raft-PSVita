@@ -13,7 +13,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -61,10 +61,7 @@
      <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scripts\AzureSkyController.cs" />
      <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scripts\AzureSkyFogScattering.cs" />
      <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scripts\AzureTargetMoonRenderTexture.cs" />
-     <Compile Include="Assets\InputModules\VitaInputModule.cs" />
-     <Compile Include="Assets\InputModules\VitaInputModuleExample\SetInitialFocus.cs" />
-     <Compile Include="Assets\PSVita_IME.cs" />
-     <Compile Include="Assets\PSVita_Trophies.cs" />
+     <Compile Include="Assets\PS Vita Input\Scripts\InputTest.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\AddResult.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\AdvancedCollision.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp\AnimationConnection.cs" />
@@ -314,11 +311,8 @@
      <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Water\WaterBase.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Water\WaterQuality.cs" />
      <Compile Include="Assets\Scripts\Assembly-CSharp-firstpass\UnityStandardAssets\Water\WaterTile.cs" />
-     <Compile Include="Assets\SonyExamples\Utils\IScreen.cs" />
-     <Compile Include="Assets\SonyExamples\Utils\MenuLayout.cs" />
-     <Compile Include="Assets\SonyExamples\Utils\MenuStack.cs" />
-     <Compile Include="Assets\SonyExamples\Utils\OnScreenLog.cs" />
-     <Compile Include="Assets\SonyExamples\Vita\CommonDialog\Scripts\SonyVitaCommonDialog.cs" />
+     <Compile Include="Assets\Scripts\MusicPlayer.cs" />
+     <Compile Include="Assets\Scripts\PSVitaControllerMouse.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -352,10 +346,15 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+     <Compile Include="Assets\Water\CubeShaded\sliceImage.cs" />
+     <Compile Include="Assets\Water\Scripts\cubeWaterDriver.cs" />
+     <Compile Include="Assets\Water\Scripts\ParticleBuildings.cs" />
+     <Compile Include="Assets\Water\Scripts\TerrainDetails.cs" />
      <None Include="Assets\Resources\ambientocclusion.shader" />
      <None Include="Assets\Shader\HiddenDLAA.shader" />
      <None Include="Assets\Resources\bokehsplatting.shader" />
      <None Include="Assets\Shader\HiddenBrightPassFilter2.shader" />
+     <None Include="Assets\Water\CubeShaded\projectWaterTexComplexAndroid.shader" />
      <None Include="Assets\Shader\HiddenFXAA III (Console).shader" />
      <None Include="Assets\Shader\PlayWay WaterUtilitiesPlanarReflection - Utilities.shader" />
      <None Include="Assets\Resources\depthoffield.shader" />
@@ -368,6 +367,7 @@
      <None Include="Assets\Shader\HiddenSimpleClear.shader" />
      <None Include="Assets\Shader\PlayWay WaterVariationsWater Volume _ALPHABLEND_ON _CUBEMAP_REFLECTIONS _VOLUMETRIC_LIGHTING _WATER_RECEIVE_SHADOWS _WATER_REFRACTION _WAVES_FFT.shader" />
      <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\AzureVertexSkyStaticCloud.shader" />
+     <None Include="Assets\PS Vita Input\Instructions.txt" />
      <None Include="Assets\Resources\bloom.shader" />
      <None Include="Assets\Shader\PlayWay WaterVariationsWater _ALPHABLEND_ON _CUBEMAP_REFLECTIONS _INCLUDE_SLOPE_VARIANCE _NORMALMAP _PLANAR_REFLECTIONS_HQ _VOLUMETRIC_LIGHTING _WATER_FOAM_WS _WATER_REFRACTION _WAVES_FFT.shader" />
      <None Include="Assets\Shader\PlayWay WaterUtilityShadowEnforcer.shader" />
@@ -390,6 +390,7 @@
      <None Include="Assets\Shader\PlayWay WaterVariationsWater _ALPHABLEND_ON _CUBEMAP_REFLECTIONS _INCLUDE_SLOPE_VARIANCE _NORMALMAP _PLANAR_REFLECTIONS_HQ _VOLUMETRIC_LIGHTING _WATER_REFRACTION _WAVES_FFT.shader" />
      <None Include="Assets\Shader\Shader ForgeWalls.shader" />
      <None Include="Assets\DRMContent\Rock1_desc.txt" />
+     <None Include="Assets\Water\CubeShaded\cubeLit.shader" />
      <None Include="Assets\Shader\HiddenFXAA Preset 3.shader" />
      <None Include="Assets\Shader\PlayWay WaterDepthCopyMix.shader" />
      <None Include="Assets\Shader\HiddenSunShaftsComposite.shader" />
@@ -400,6 +401,7 @@
      <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\PrecomputedFogScattering.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\Water\CubeShaded\projectWaterTex.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\AzureRealisticFogScattering.shader" />
@@ -409,20 +411,24 @@
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
      <None Include="Assets\Shader\Shader ForgeDepthTest.shader" />
      <None Include="Assets\Shader\PlayWay WaterVariationsWater _ALPHABLEND_ON _CUBEMAP_REFLECTIONS _INCLUDE_SLOPE_VARIANCE _NORMALMAP _PLANAR_REFLECTIONS _VOLUMETRIC_LIGHTING _WATER_REFRACTION _WAVES_FFT.shader" />
+     <None Include="Assets\Water\CubeShaded\projectWaterVita.shader" />
      <None Include="Assets\Azure[Sky] Dynamic Skybox\Documentation\ReadMe.txt" />
      <None Include="Assets\Shader\PlayWay WaterVariationsWater Volume _ALPHABLEND_ON _CUBEMAP_REFLECTIONS _VOLUMETRIC_LIGHTING _WATER_REFRACTION _WAVES_FFT.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\Water\CubeShaded\projectWaterSimpleSimple.shader" />
      <None Include="Assets\Shader\HiddenSSAA.shader" />
      <None Include="Assets\Resources\histogramrender.shader" />
+     <None Include="Assets\Water\CubeShaded\projectWaterTexComplexTransluscent.shader" />
      <None Include="Assets\Shader\HiddenBlurAndFlares.shader" />
      <None Include="Assets\Shader\WaterTessellation.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
-     <None Include="Assets\Water5.shader" />
      <None Include="Assets\Shader\azure[Sky]azure[Moon].shader" />
+     <None Include="Assets\Water\CubeShaded\projectWaterTexComplexMin.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\Shader\azure[Sky]azure[Fog].shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\Water\CubeShaded\projectWaterTexComplex.shader" />
      <None Include="Assets\Resources\medianfilter.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Shader\Shader ForgePalmtree.shader" />
@@ -430,17 +436,19 @@
      <None Include="Assets\Shader\HiddenFXAA Preset 2.shader" />
      <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\PrecomputedPixelSky.shader" />
      <None Include="Assets\Shader\HiddenBlendForBloom.shader" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\_Old Version with Precomputed Sky\Read-Me First.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\Shader\HiddenNFAA.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\Resources\smaa.shader" />
      <None Include="Assets\Shader\PlayWay WaterStandard.shader" />
-     <None Include="Assets\SonyExamples\Vita\CommonDialog\SonyVitaCommonDialogReadme.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
      <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\AzurePixelSkyStaticCloud.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\AzurePixelSky.shader" />
+     <None Include="Assets\Water\CubeShaded\VitaWaterOptimized.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+     <None Include="Assets\Water\CubeShaded\projectWaterVitaGerstner.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\Shader\PlayWay WaterUtilitiesFFT Utilities.shader" />
  <Reference Include="UnityEditor.StandardEvents">
@@ -646,12 +654,6 @@
  </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="SonyNP">
- <HintPath>D:/PSVITA/Unity Projects/git/New folder/bs/Assets/SonyAssemblies/SonyNP.dll</HintPath>
- </Reference>
- <Reference Include="SonyVitaCommonDialog">
- <HintPath>D:/PSVITA/Unity Projects/git/New folder/bs/Assets/SonyAssemblies/SonyVitaCommonDialog.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>C:/Users/ajxcf/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>

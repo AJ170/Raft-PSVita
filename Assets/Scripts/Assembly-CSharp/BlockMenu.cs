@@ -1,15 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class BlockMenu : MonoBehaviour
 {
 	public PieMenu piemenu;
 
 	[Header("UI components")]
-	public Text UIName;
+	public TextMeshProUGUI UIName;
 
-	public Text UIDescription;
+	public TextMeshProUGUI UIDescription;
 
 	public Image UIImage;
 

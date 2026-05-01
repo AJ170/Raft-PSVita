@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class OptionsMenu : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class OptionsMenu : MonoBehaviour
 
 	public GameObject[] categoryParents;
 
-	public Text categoryLabel;
+	public TextMeshProUGUI categoryLabel;
 
 	[Header("Audio components")]
 	public AudioMixer mixer;
@@ -89,6 +90,8 @@ public class OptionsMenu : MonoBehaviour
 			{
 				startMenuScreen.standardLayout.SetActive(true);
 				startMenuScreen.newGameLayout.SetActive(false);
+                startMenuScreen.creditButton.SetActive(true);
+                startMenuScreen.newsFeed.SetActive(true);
 				Exit();
 			}
 		}
@@ -120,4 +123,9 @@ public class OptionsMenu : MonoBehaviour
 		}
 		OpenCategory(currentCategory);
 	}
+
+    public static void PlayUIClick()
+    {
+        SingletonGeneric<SoundManager>.Singleton.PlaySound("UIButtonClick");
+    }
 }

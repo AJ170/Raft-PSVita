@@ -89,7 +89,16 @@ public class Inventory : MonoBehaviour
 		if (dragging)
 		{
 			draggingImage.sprite = fromSlot.iItem.sprite;
-			draggingImage.rectTransform.position = Input.mousePosition - new Vector3(draggingImage.rectTransform.sizeDelta.x / 4f, (0f - draggingImage.rectTransform.sizeDelta.y) / 4f);
+    
+			// Use virtual cursor position if available, fall back to real mouse
+			Vector2 dragPos = PSVitaControllerMouse.IsCursorActive 
+				? PSVitaControllerMouse.CursorScreenPosition 
+				: (Vector2)Input.mousePosition;
+        
+			draggingImage.rectTransform.position = new Vector3(
+				dragPos.x - draggingImage.rectTransform.sizeDelta.x / 4f,
+				dragPos.y + draggingImage.rectTransform.sizeDelta.y / 4f
+			);
 		}
 		if (!canQuickEquip || dragging || !(hoverSlot != null))
 		{
@@ -111,6 +120,7 @@ public class Inventory : MonoBehaviour
 				break;
 			}
 		}
+		
 	}
 
 	public virtual AddResult AddItem(IItem item, int amount)

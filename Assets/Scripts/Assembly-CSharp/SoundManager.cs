@@ -7,8 +7,13 @@ public class SoundManager : SingletonGeneric<SoundManager>
 
 	private void Awake()
 	{
-		Object.DontDestroyOnLoad(base.gameObject);
-		if (audioConnections.Count == 0)
+        if (UnityEngine.Object.FindObjectOfType<SoundManager>() != this)
+        {
+            UnityEngine.Object.Destroy(base.gameObject);
+            return;
+        }
+        UnityEngine.Object.DontDestroyOnLoad(base.gameObject);
+        if (audioConnections.Count == 0)
 		{
 			for (int i = 0; i < base.transform.childCount; i++)
 			{
